@@ -2,7 +2,7 @@
 
 This will give you basic understanding of the GStreamer pipeline and how to play a video source files(MP4).
 
-So lets begin with the basic elements which are required for the basic pipeline.
+So lets begin with the elements which are required for the basic pipeline.
 
 Elements:
 1. Source file(URI)
@@ -11,7 +11,10 @@ Elements:
 4. audiosink
 5. videosink
 
-And a GST pipeline bus handler, which will inform the EOS or Error.
+gst-launch-1.0 filesrc location=/root/video.mp4 | decodebin | autoaudiosink 
+															| autovideosink
+
+And a GST pipeline bus handler, which will inform EOS or Error.
 
 Free the resources when completed.
 
