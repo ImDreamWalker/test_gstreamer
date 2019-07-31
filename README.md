@@ -22,3 +22,8 @@ For more information please follow the official link: https://gstreamer.freedesk
 
 Add some more changes to new branch.
 
+Compilation command on Linux:
+gcc -Wall videoplayer.c -o videoplayer $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-app-1.0)
+
+To play or run:
+./videoplayer ~/workspace/media/street_720p-videoOnly.mp4
